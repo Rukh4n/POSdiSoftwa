@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303"
+    android:padding="24dp"
+    tools:context=".AddCategory">
+
+    <!-- Title Label -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Kategori"
+        android:textColor="#F1EFEC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Label Nama Kategori -->
+    <TextView
+        android:id="@+id/tvLabelNamaKategori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nama Kategori"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Input Nama Kategori -->
+    <EditText
+        android:id="@+id/etNamaKategori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama kategori"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNamaKategori"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:backgroundTint="#D4C9BE"
+        android:textColor="#030303"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etNamaKategori"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

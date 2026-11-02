@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303"
+    tools:context=".EditCategory">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Kategori"
+        android:textColor="#F1EFEC"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Label Nama Kategori -->
+    <TextView
+        android:id="@+id/tvLabelCategoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nama Kategori"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"/>
+
+    <EditText
+        android:id="@+id/etEditCategoryName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama kategori"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelCategoryName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"/>
+
+    <Button
+        android:id="@+id/btnUpdateCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:backgroundTint="#D4C9BE"
+        android:textColor="#030303"
+        android:textStyle="bold"
+        android:minHeight="48dp"
+        app:layout_constraintTop_toBottomOf="@id/etEditCategoryName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

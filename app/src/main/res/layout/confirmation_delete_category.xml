@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#030303"
+    android:padding="24dp">
+
+    <!-- Judul Dialog -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hapus Kategori"
+        android:textColor="#F1EFEC"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <!-- Pesan Konfirmasi -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apakah Anda yakin ingin menghapus kategori ini?"
+        android:textColor="#F1EFEC"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <!-- Tombol Hapus -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hapus"
+        android:backgroundTint="#D4C9BE"
+        android:textColor="#030303"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Tombol Batal -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        android:backgroundTint="#D4C9BE"
+        android:textColor="#030303"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

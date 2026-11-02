@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:hint="Nama Produk"
+        android:textColor="#F1EFEC"
+        android:backgroundTint="#D4C9BE"
+        android:padding="8dp"/>
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="Jumlah"
+        android:inputType="number"
+        android:textColor="#F1EFEC"
+        android:backgroundTint="#D4C9BE"
+        android:padding="8dp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/etUnitTotal"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="Total Satuan"
+        android:inputType="numberDecimal"
+        android:textColor="#F1EFEC"
+        android:backgroundTint="#D4C9BE"
+        android:padding="8dp"
+        android:layout_marginStart="4dp"/>
+
+    <EditText
+        android:id="@+id/etTotalPrice"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="Harga Total"
+        android:inputType="numberDecimal"
+        android:textColor="#F1EFEC"
+        android:backgroundTint="#D4C9BE"
+        android:padding="8dp"
+        android:layout_marginStart="4dp"/>
+
+</LinearLayout>

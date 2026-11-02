@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303"
+    tools:context=".DetailTransaction">
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layoutButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:background="#D4C9BE"
+                android:orientation="vertical"
+                android:elevation="6dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="4dp"
+                android:padding="16dp"
+                android:clipToOutline="true">
+
+                <TextView
+                    android:id="@+id/textTransactionId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#030303"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:text="ID Transaksi: 001" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textTransactionCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F1EFEC"
+                android:textSize="16sp"
+                android:paddingBottom="8dp"
+                android:text="Kode Transaksi: TRX001" />
+
+            <LinearLayout
+                android:id="@+id/layoutItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:dividerPadding="4dp"
+                android:showDividers="middle" />
+
+            <TextView
+                android:id="@+id/textTotalTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F1EFEC"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingTop="12dp"
+                android:text="Total Transaksi: Rp 40.000" />
+
+            <TextView
+                android:id="@+id/textCreatedAt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F1EFEC"
+                android:textSize="14sp"
+                android:paddingTop="4dp"
+                android:text="Tanggal: 2025-11-01" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnPrint"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Cetak"
+            android:backgroundTint="#D4C9BE"
+            android:textColor="#030303"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:backgroundTint="#D4C9BE"
+            android:textColor="#030303"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

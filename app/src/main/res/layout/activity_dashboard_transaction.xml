@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#030303"
+    tools:context=".DashboardTransactionFragment">
+
+    <!-- Header Fixed with Border -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/border_orange">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnTambahTransaksi"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="+"
+                android:textSize="22sp"
+                android:textColor="#030303"
+                android:background="@drawable/add"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textTitleTransaction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Daftar Transaksi"
+                android:textColor="#F1EFEC"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/btnExport"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="Export"
+                android:textColor="#030303"
+                android:backgroundTint="#D4C9BE"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="Delete"
+                android:visibility="gone"
+                app:tint="#D4C9BE"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@drawable/border_orange"
+            android:padding="4dp"
+            android:layout_marginTop="12dp">
+
+            <EditText
+                android:id="@+id/etSearchTransaction"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Cari transaksi..."
+                android:background="@android:color/transparent"
+                android:textColor="#F1EFEC"
+                android:textColorHint="#888888"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/btnSearchTransaction"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/search"
+                android:contentDescription="Cari"
+                app:tint="#D4C9BE" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollViewTransaksi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvEmptyTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Belum ada daftar transaksi"
+                android:textColor="#B8B6B3"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layoutTransaksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp" />
+
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303"
+    android:padding="24dp"
+    tools:context=".EditProduct">
+
+    <!-- Title Label -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Produk"
+        android:textColor="#F1EFEC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Label Nama Produk -->
+    <TextView
+        android:id="@+id/tvLabelTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nama Produk"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Title Input -->
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama produk"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="text"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Label Deskripsi -->
+    <TextView
+        android:id="@+id/tvLabelDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Description Input -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan deskripsi produk"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:minHeight="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Label Kategori -->
+    <TextView
+        android:id="@+id/tvLabelCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Category Dropdown -->
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F1EFEC"
+        android:popupBackground="#030303"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Label Stok -->
+    <TextView
+        android:id="@+id/tvLabelStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Stok"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/spinnerCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Stock Input -->
+    <EditText
+        android:id="@+id/etStock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan stok"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="number"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelStock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Label Harga Beli -->
+    <TextView
+        android:id="@+id/tvLabelHargaBeli"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Harga Beli"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etStock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Purchase Price Input -->
+    <EditText
+        android:id="@+id/etHargaBeli"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan harga beli"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelHargaBeli"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Label Harga Jual -->
+    <TextView
+        android:id="@+id/tvLabelHargaJual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Harga Jual"
+        android:textColor="#F1EFEC"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etHargaBeli"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Selling Price Input -->
+    <EditText
+        android:id="@+id/etHargaJual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan harga jual"
+        android:textColor="#F1EFEC"
+        android:textColorHint="#F1EFEC"
+        android:backgroundTint="#F1EFEC"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelHargaJual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btnSimpan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Simpan Perubahan"
+        android:backgroundTint="#D4C9BE"
+        android:textColor="#030303"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etHargaJual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

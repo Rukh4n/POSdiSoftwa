@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#030303"
+    tools:context=".DashboardCategoryFragment">
+
+    <!-- Header Fixed with Border (Tombol Add + Judul) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/border_orange">
+
+        <Button
+            android:id="@+id/btnTambahKategori"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:text="+"
+            android:textSize="22sp"
+            android:textColor="#030303"
+            android:background="@drawable/add"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDaftarKategori"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Daftar Kategori"
+            android:textColor="#F1EFEC"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- TextView Tanda Kosong -->
+            <TextView
+                android:id="@+id/tvEmptyCategory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tidak ada daftar kategori"
+                android:textColor="#B8B6B3"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Layout Tambah Kategori -->
+                <LinearLayout
+                    android:id="@+id/layoutAddCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="#1A1A1A"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etNamaKategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Kategori"
+                        android:textColor="#F1EFEC"
+                        android:textColorHint="#B8B6B3"
+                        android:backgroundTint="#F1EFEC"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp" />
+
+                    <Button
+                        android:id="@+id/btnSimpan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Simpan"
+                        android:backgroundTint="#D4C9BE"
+                        android:textColor="#030303"
+                        android:textStyle="bold"
+                        android:minHeight="48dp"
+                        android:layout_marginTop="16dp" />
+
+                </LinearLayout>
+
+                <!-- RecyclerView untuk menampilkan daftar kategori -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerKategori"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:clipToPadding="false"
+                    android:paddingBottom="0dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

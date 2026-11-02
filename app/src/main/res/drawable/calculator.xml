@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Body Kalkulator -->
+    <path
+        android:fillColor="#D4AF37"
+        android:pathData="M6,2 L18,2 Q20,2 20,4 L20,20 Q20,22 18,22 L6,22 Q4,22 4,20 L4,4 Q4,2 6,2 Z"/>
+
+    <!-- Garis layar -->
+    <path
+        android:fillColor="#B8860B"
+        android:pathData="M8,6 L16,6 L16,7 L8,7 Z"/>
+
+    <!-- Tombol-tombol -->
+    <path android:fillColor="#FFD700" android:pathData="M8,10 h2 v2 h-2 Z"/>
+    <path android:fillColor="#FFD700" android:pathData="M11,10 h2 v2 h-2 Z"/>
+    <path android:fillColor="#FFD700" android:pathData="M14,10 h2 v2 h-2 Z"/>
+
+    <path android:fillColor="#FFD700" android:pathData="M8,13 h2 v2 h-2 Z"/>
+    <path android:fillColor="#FFD700" android:pathData="M11,13 h2 v2 h-2 Z"/>
+    <path android:fillColor="#FFD700" android:pathData="M14,13 h2 v2 h-2 Z"/>
+
+    <path android:fillColor="#FFD700" android:pathData="M8,16 h2 v2 h-2 Z"/>
+    <path android:fillColor="#FFD700" android:pathData="M11,16 h2 v2 h-2 Z"/>
+    <path android:fillColor="#FFD700" android:pathData="M14,16 h2 v2 h-2 Z"/>
+
+</vector>
